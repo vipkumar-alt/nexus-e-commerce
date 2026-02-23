@@ -1,0 +1,384 @@
+/* ABSTRACTS */
+/* BASE */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #070d14;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* LAYOUT */
+.navbar {
+  background: #0b111a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.navbar__container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+.navbar__links a {
+  color: #9aa4b2;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.navbar__links a:hover {
+  color: #19d3e0;
+}
+.navbar .logo-box {
+  border: 2px solid #19d3e0;
+  color: #19d3e0;
+}
+.navbar .search-input {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.hero__content {
+  flex: 1;
+  max-width: 600px;
+}
+.hero__title {
+  font-size: 4rem;
+  margin: 1.5rem 0;
+}
+.hero__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.hero__filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero__image {
+  flex: 1;
+  height: 500px;
+}
+
+.catalog-page {
+  padding: 4rem 2rem;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+}
+
+/* Sidebar */
+.catalog__sidebar {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding-right: 2rem;
+}
+
+.filter-group {
+  margin-bottom: 3rem;
+}
+.filter-group__title {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #19d3e0;
+}
+
+.filter-option {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  color: #9aa4b2;
+}
+
+.sort-dropdown {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f1623;
+  color: #ffffff;
+}
+
+/* Product Grid */
+.catalog__products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.deals-page {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.deals-hero__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.deals-hero__title span {
+  color: #19d3e0;
+}
+
+.deals-hero__subtitle {
+  color: #9aa4b2;
+  margin-bottom: 2rem;
+}
+
+.subscribe-section {
+  margin-top: 6rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.subscribe-section__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.subscribe-section__tag {
+  color: #19d3e0;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+.subscribe-section__title {
+  margin: 1rem 0;
+}
+.subscribe-section__desc {
+  color: #9aa4b2;
+  margin-bottom: 2rem;
+}
+.subscribe-section__form {
+  display: flex;
+  gap: 1rem;
+}
+.subscribe-section__form input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f1623;
+  color: #ffffff;
+}
+.subscribe-section__note {
+  display: block;
+  margin-top: 1rem;
+  color: #9aa4b2;
+}
+
+.contact-page {
+  padding: 6rem 2rem;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+.contact-page__tag {
+  color: #19d3e0;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+.contact-page__title {
+  margin: 1rem 0 3rem 0;
+  font-size: 2.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f1623;
+  color: #ffffff;
+}
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form__btn {
+  margin-top: 1rem;
+}
+
+/* COMPONENTS */
+.btn {
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+/* ================= FLIP CARD CONTAINER ================= */
+.product-card {
+  perspective: 1200px;
+  height: 340px;
+}
+
+/* INNER WRAPPER (ROTATES) */
+.product-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* DESKTOP HOVER */
+.product-card:hover .product-card__inner {
+  transform: rotateY(180deg);
+}
+
+/* MOBILE TAP SUPPORT */
+.product-card.is-flipped .product-card__inner {
+  transform: rotateY(180deg);
+}
+
+/* ================= FRONT & BACK COMMON ================= */
+.product-card__front,
+.product-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f1623;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+/* ================= FRONT SIDE ================= */
+.product-card__front {
+  z-index: 2;
+}
+
+/* IMAGE */
+.product-card__image {
+  height: 170px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #0f1623, #0b111a);
+  margin-bottom: 1rem;
+}
+
+/* META */
+.product-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #19d3e0;
+  font-weight: 600;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #9aa4b2;
+  font-size: 0.85rem;
+}
+
+.rating {
+  color: gold;
+  font-size: 0.85rem;
+}
+
+/* ================= BACK SIDE ================= */
+.product-card__back {
+  transform: rotateY(180deg);
+  text-align: center;
+}
+.product-card__back h4 {
+  margin-bottom: 1rem;
+}
+.product-card__back p {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: #9aa4b2;
+}
+.product-card__back button {
+  margin-top: auto;
+}
+
+/* Slight lift effect */
+.product-card:hover {
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
+}
+
+/* Soft glow when flipped */
+.product-card.is-flipped .product-card__front,
+.product-card:hover .product-card__front {
+  box-shadow: 0 0 20px rgba(25, 211, 224, 0.3);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+
+.deals-page {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.deals-hero__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+  span {
+    color: $primary;
+  }
+}
+
+.deals-hero__subtitle {
+  color: $text-muted;
+  margin-bottom: 2rem;
+}
+
+.subscribe-section {
+  margin-top: 6rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__tag {
+    color: $primary;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+  }
+
+  &__title {
+    margin: 1rem 0;
+  }
+
+  &__desc {
+    color: $text-muted;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    display: flex;
+    gap: 1rem;
+
+    input {
+      flex: 1;
+      padding: 0.8rem;
+      border-radius: $radius;
+      border: 1px solid $border-color;
+      background: $card-bg;
+      color: $text-light;
+    }
+  }
+
+  &__note {
+    display: block;
+    margin-top: 1rem;
+    color: $text-muted;
+  }
+}

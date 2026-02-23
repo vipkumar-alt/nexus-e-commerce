@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+body {
+  font-family: "Inter", sans-serif;
+  background: $bg-dark;
+  color: $text-light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+

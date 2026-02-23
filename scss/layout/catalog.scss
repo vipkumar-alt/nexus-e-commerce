@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+.catalog-page {
+  padding: 4rem 2rem;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+}
+
+/* Sidebar */
+
+.catalog__sidebar {
+  border-right: 1px solid $border-color;
+  padding-right: 2rem;
+}
+
+.filter-group {
+  margin-bottom: 3rem;
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: $primary;
+  }
+}
+
+.filter-option {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  color: $text-muted;
+}
+
+.sort-dropdown {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: $radius;
+  border: 1px solid $border-color;
+  background: $card-bg;
+  color: $text-light;
+}
+
+/* Product Grid */
+
+.catalog__products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}

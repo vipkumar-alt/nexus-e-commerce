@@ -1,0 +1,55 @@
+@use "../abstracts" as *;
+
+.contact-page {
+  padding: 6rem 2rem;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+
+  &__tag {
+    color: $primary;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+  }
+
+  &__title {
+    margin: 1rem 0 3rem 0;
+    font-size: 2.5rem;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  label {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.8rem;
+    border-radius: $radius;
+    border: 1px solid $border-color;
+    background: $card-bg;
+    color: $text-light;
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+.contact-form__btn {
+  margin-top: 1rem;
+}

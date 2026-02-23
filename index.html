@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!--  NAVBAR   -->
+    <header class="navbar">
+      <div class="navbar__container">
+        <div class="navbar__logo">
+          <span class="logo-text">NEXUS</span>
+        </div>
+
+        <nav class="navbar__links">
+          <a href="#">Catalog</a>
+          <a href="#">New Arrivals</a>
+          <a href="#">Deals</a>
+          <a href="#">About</a>
+        </nav>
+
+        <div class="navbar__actions">
+          <input type="text" placeholder="Search..." class="search-input" />
+          <div class="icon user"></div>
+          <div class="icon cart"></div>
+        </div>
+      </div>
+    </header>
+
+    <!--  HERO  -->
+    <section class="hero">
+      <div class="hero__content">
+        <span class="hero__tag">// NEXT-GEN TECH CATALOG</span>
+
+        <h1 class="hero__title">
+          Future <br />
+          <span>Interface</span> <br />
+          Design
+        </h1>
+
+        <p class="hero__desc">
+          Explore cutting-edge peripherals crafted for the next generation of
+          creators, gamers, and professionals.
+        </p>
+
+        <div class="hero__buttons">
+          <button class="btn btn--primary">Browse Catalog</button>
+          <button class="btn btn--outline">View Deals</button>
+        </div>
+
+        <div class="hero__filters">
+          <button class="filter active">All</button>
+          <button class="filter">Audio</button>
+          <button class="filter">Wearables</button>
+          <button class="filter">Peripherals</button>
+          <button class="filter">Accessories</button>
+        </div>
+      </div>
+
+      <div class="hero__image"></div>
+    </section>
+
+    <!--  CATALOG  -->
+    <section class="catalog-page">
+      <div class="catalog">
+        <!-- SIDEBAR -->
+        <aside class="catalog__sidebar">
+          <div class="filter-group">
+            <h3 class="filter-group__title">Rating</h3>
+
+            <label class="filter-option">
+              <input type="radio" name="rating" /> 4★ & Up
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="rating" /> 3★ & Up
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="rating" /> 2★ & Up
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="rating" /> 1★ & Up
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Sort By</h3>
+
+            <select class="sort-dropdown">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+              <option>Highest Rated</option>
+            </select>
+          </div>
+        </aside>
+
+        <!-- PRODUCT GRID -->
+        <div class="catalog__products">
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <!-- FRONT -->
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">Phantom MK2 Keyboard</h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$179</span>
+                    <span class="rating">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BACK -->
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  Mechanical RGB keyboard with ultra-fast response, customizable
+                  macros and aluminum build.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">Spectre Gaming Mouse</h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$89</span>
+                    <span class="old-price">$119</span>
+                    <span class="rating">★★★★☆</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  High precision gaming mouse with RGB lighting and programmable
+                  DPI settings.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">Echo Wireless Earbuds</h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$79</span>
+                    <span class="rating">★★★★☆</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  Active noise cancellation with immersive sound and 24-hour
+                  battery backup.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">Nova RGB Headset</h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$129</span>
+                    <span class="rating">★★★★☆</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  Surround sound headset with adaptive noise isolation and
+                  customizable RGB lighting.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">Orbit Smartwatch X</h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$249</span>
+                    <span class="rating">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  AMOLED display smartwatch with fitness tracking, heart-rate
+                  monitor and 5-day battery life.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">
+                    Zenith Mechanical Keyboard
+                  </h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$199</span>
+                    <span class="rating">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  Premium aluminum mechanical keyboard with hot-swappable
+                  switches and per-key RGB customization.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">Pulse 4K Monitor</h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$499</span>
+                    <span class="rating">★★★★☆</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  27-inch 4K UHD monitor with HDR support, ultra-thin bezels and
+                  144Hz refresh rate.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">Aero Wireless Charger</h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$59</span>
+                    <span class="rating">★★★★☆</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  Fast 15W wireless charging pad with temperature control and
+                  sleek minimal design.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD -->
+          <div class="product-card">
+            <div class="product-card__inner">
+              <div class="product-card__front">
+                <div class="product-card__image"></div>
+
+                <div class="product-card__content">
+                  <h4 class="product-card__title">Fusion Gaming Controller</h4>
+
+                  <div class="product-card__meta">
+                    <span class="price">$99</span>
+                    <span class="rating">★★★★☆</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card__back">
+                <h4>Product Details</h4>
+                <p>
+                  Ergonomic gaming controller with customizable triggers and
+                  ultra-low latency connectivity.
+                </p>
+                <button class="btn btn--primary">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog__footer">Showing 7 of 7 products</div>
+    </section>
+
+    <!--   DEALS SECTION   -->
+<section class="deals-page">
+
+  <div class="deals-hero">
+    <h2 class="deals-hero__title">
+      Cyber <span>Week</span> Sale
+    </h2>
+
+    <p class="deals-hero__subtitle">
+      Up to 40% off on selected peripherals. Free shipping on orders
+      over $100. Ends Sunday.
+    </p>
+
+    <button class="btn btn--primary deals-hero__btn">
+      Shop the Sale
+    </button>
+  </div>
+
+  <div class="subscribe-section">
+
+    <div class="subscribe-section__icon">✉</div>
+
+    <span class="subscribe-section__tag">// STAY CONNECTED</span>
+
+    <h3 class="subscribe-section__title">
+      Get the Latest Drops
+    </h3>
+
+    <p class="subscribe-section__desc">
+      Subscribe for early access to new releases,
+      exclusive deals, and curated tech insights.
+    </p>
+
+    <div class="subscribe-section__form">
+      <input type="email" placeholder="your@email.com" />
+      <button class="btn btn--primary">Subscribe</button>
+    </div>
+
+    <small class="subscribe-section__note">
+      No spam. Unsubscribe anytime. We respect your privacy.
+    </small>
+
+  </div>
+
+</section>
+
+<!--   CONTACT SECTION   -->
+<section class="contact-page">
+
+  <span class="contact-page__tag">// GET IN TOUCH</span>
+
+  <h2 class="contact-page__title">Contact Us</h2>
+
+  <form class="contact-form">
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" placeholder="John Doe" />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="john@example.com" />
+    </div>
+
+    <div class="form-group">
+      <label>Subject</label>
+      <select>
+        <option>Select a subject...</option>
+        <option>Support</option>
+        <option>Orders</option>
+        <option>Partnership</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Message</label>
+      <textarea placeholder="Tell us what's on your mind..."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn--primary contact-form__btn">
+      Send Message
+    </button>
+
+  </form>
+
+</section>
+
+    <!-- JS for mobile flip -->
+    <!-- <script>
+      const cards = document.querySelectorAll(".product-card");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("is-flipped");
+        });
+      });
+    </script> -->
+  </body>
+</html>

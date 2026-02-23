@@ -1,0 +1,124 @@
+@use "../abstracts" as *;
+
+/* FLIP CARD CONTAINER */
+
+.product-card {
+  perspective: 1200px;
+  height: 340px;
+}
+
+/* INNER WRAPPER (ROTATES) */
+.product-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* DESKTOP HOVER */
+.product-card:hover .product-card__inner {
+  transform: rotateY(180deg);
+}
+
+/* MOBILE TAP SUPPORT */
+.product-card.is-flipped .product-card__inner {
+  transform: rotateY(180deg);
+}
+
+
+
+
+.product-card__front,
+.product-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+
+  border-radius: $radius;
+  border: 1px solid $border-color;
+  background: $card-bg;
+
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: $transition;
+}
+
+
+
+
+.product-card__front {
+  z-index: 2;
+}
+
+/* IMAGE */
+.product-card__image {
+  height: 170px;
+  border-radius: $radius;
+  background: linear-gradient(145deg, #0f1623, #0b111a);
+  margin-bottom: 1rem;
+}
+
+/* META */
+.product-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: $primary;
+  font-weight: 600;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: $text-muted;
+  font-size: 0.85rem;
+}
+
+.rating {
+  color: gold;
+  font-size: 0.85rem;
+}
+
+
+
+
+.product-card__back {
+  transform: rotateY(180deg);
+  text-align: center;
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: $text-muted;
+  }
+
+  button {
+    margin-top: auto;
+  }
+}
+
+
+
+/* Slight lift effect */
+.product-card:hover {
+  transform: translateY(-6px);
+  transition: $transition;
+}
+
+/* Soft glow when flipped */
+.product-card.is-flipped .product-card__front,
+.product-card:hover .product-card__front {
+  box-shadow: $glow;
+}
