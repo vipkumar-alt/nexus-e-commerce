@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Nexus</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar__container">
+        <div class="navbar__logo">
+          <span class="logo-text">NEXUS</span>
+        </div>
+
+        <nav class="navbar__links">
+          <a href="index.html">Catalog</a>
+          <a href="index.html#new-arrivals">New Arrivals</a>
+          <a href="index.html#deals">Deals</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="navbar__actions">
+          <input type="text" placeholder="Search..." class="search-input" />
+          <a href="profile.html" class="icon user" aria-label="Profile"></a>
+          <a href="cart.html" class="icon cart" aria-label="Cart">
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+
+        <button class="navbar__toggle" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="profile-page">
+      <section class="profile-hero">
+        <h1>Your Profile</h1>
+        <p class="muted">Manage your account, addresses and orders.</p>
+      </section>
+
+      <section class="profile-content">
+        <h2>Account Details</h2>
+        <div class="profile-card">
+          <p><strong>Name:</strong> John Doe</p>
+          <p><strong>Email:</strong> john@example.com</p>
+          <p><strong>Member since:</strong> Jan 2025</p>
+          <button class="btn btn--outline">Edit Profile</button>
+        </div>
+
+        <h2>Orders</h2>
+        <p>No recent orders.</p>
+      </section>
+    </main>
+  </body>
+</html>

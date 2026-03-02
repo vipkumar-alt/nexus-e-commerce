@@ -2,8 +2,8 @@
 
 .contact-page {
   padding: 6rem 2rem;
-  max-width: 700px;
-  margin: auto;
+  max-width: 750px;
+  margin: 0 auto;
   text-align: center;
 
   &__tag {
@@ -14,9 +14,10 @@
 
   &__title {
     margin: 1rem 0 3rem 0;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
   }
 }
+
 
 .contact-form {
   display: flex;
@@ -32,24 +33,59 @@
   label {
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
+    color: $text-muted;
   }
 
   input,
   select,
   textarea {
-    padding: 0.8rem;
+    padding: 0.9rem;
     border-radius: $radius;
     border: 1px solid $border-color;
     background: $card-bg;
     color: $text-light;
+    font-size: 0.9rem;
+    transition: $transition;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: $primary;
+    box-shadow: 0 0 0 2px rgba(25, 211, 224, 0.15);
   }
 
   textarea {
-    min-height: 120px;
+    min-height: 140px;
     resize: vertical;
   }
 }
 
+
+
 .contact-form__btn {
   margin-top: 1rem;
+  align-self: flex-start;
+  padding: 0.9rem 2rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-form__btn {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page__title {
+    font-size: 1.8rem;
+  }
 }

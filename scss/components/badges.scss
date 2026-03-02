@@ -1,5 +1,75 @@
+@use "../abstracts" as *;
+
+/* BASE BADGE */
+
 .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+
+  background: $primary;
+  color: #000;
+
+  line-height: 1;
+  min-width: 20px;
+}
+
+
+/* VARIANTS */
+
+.badge--danger {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+
+.badge--success {
+  background: #00c896;
+  color: #000;
+}
+
+
+.badge--outline {
+  background: transparent;
+  border: 1px solid $primary;
+  color: $primary;
+}
+
+
+/* ICON POSITION (Cart Counter) */
+
+.icon {
+  position: relative;
+}
+
+.icon .badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 0.65rem;
   padding: 2px 6px;
-  border-radius: 12px;
+}
+
+
+.product-card__badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+
+
+@media (max-width: 480px) {
+  .badge {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
 }

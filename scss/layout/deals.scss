@@ -1,12 +1,19 @@
 @use "../abstracts" as *;
 
+
 .deals-page {
   padding: 6rem 2rem;
   text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.deals-hero {
+  margin-bottom: 4rem;
 }
 
 .deals-hero__title {
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
 
   span {
@@ -16,52 +23,96 @@
 
 .deals-hero__subtitle {
   color: $text-muted;
-  margin-bottom: 2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
 }
 
+.deals-hero__btn {
+  padding: 0.9rem 2rem;
+}
+
+
+
 .subscribe-section {
-  margin-top: 6rem;
+  margin-top: 5rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
 
-  &__icon {
+.subscribe-section__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.subscribe-section__tag {
+  color: $primary;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.subscribe-section__title {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+}
+
+.subscribe-section__desc {
+  color: $text-muted;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.subscribe-section__form {
+  display: flex;
+  gap: 1rem;
+}
+
+.subscribe-section__form input {
+  flex: 1;
+  padding: 0.9rem;
+  border-radius: $radius;
+  border: 1px solid $border-color;
+  background: $card-bg;
+  color: $text-light;
+  min-width: 0;
+}
+
+.subscribe-section__note {
+  display: block;
+  margin-top: 1rem;
+  color: $text-muted;
+  font-size: 0.85rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .deals-page {
+    padding: 4rem 1.5rem;
+  }
+
+  .subscribe-section {
+    margin-top: 3rem;
+  }
+
+  .subscribe-section__form {
+    flex-direction: column;
+  }
+
+  .subscribe-section__form input,
+  .subscribe-section__form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .deals-hero__title {
     font-size: 2rem;
-    margin-bottom: 1rem;
   }
 
-  &__tag {
-    color: $primary;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-  }
-
-  &__title {
-    margin: 1rem 0;
-  }
-
-  &__desc {
-    color: $text-muted;
-    margin-bottom: 2rem;
-  }
-
-  &__form {
-    display: flex;
-    gap: 1rem;
-
-    input {
-      flex: 1;
-      padding: 0.8rem;
-      border-radius: $radius;
-      border: 1px solid $border-color;
-      background: $card-bg;
-      color: $text-light;
-    }
-  }
-
-  &__note {
-    display: block;
-    margin-top: 1rem;
-    color: $text-muted;
+  .subscribe-section__title {
+    font-size: 1.5rem;
   }
 }

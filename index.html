@@ -16,17 +16,25 @@
         </div>
 
         <nav class="navbar__links">
-          <a href="#">Catalog</a>
-          <a href="#">New Arrivals</a>
-          <a href="#">Deals</a>
-          <a href="#">About</a>
+          <a href="#catalog">Catalog</a>
+          <a href="#new-arrivals">New Arrivals</a>
+          <a href="#deals">Deals</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div class="navbar__actions">
+          <button class="search-btn" aria-label="Toggle search">
+            <span class="icon search-icon"></span>
+          </button>
           <input type="text" placeholder="Search..." class="search-input" />
-          <div class="icon user"></div>
-          <div class="icon cart"></div>
+          <a href="profile.html" class="icon user" aria-label="Profile"></a>
+          <a href="cart.html" class="icon cart" aria-label="Cart">
+            <span class="cart-count">0</span>
+          </a>
         </div>
+        <button class="navbar__toggle" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
       </div>
     </header>
 
@@ -47,16 +55,16 @@
         </p>
 
         <div class="hero__buttons">
-          <button class="btn btn--primary">Browse Catalog</button>
-          <button class="btn btn--outline">View Deals</button>
+          <a href="#catalog" class="btn btn--primary">Browse Catalog</a>
+          <a href="#deals" class="btn btn--outline">View Deals</a>
         </div>
 
         <div class="hero__filters">
-          <button class="filter active">All</button>
-          <button class="filter">Audio</button>
-          <button class="filter">Wearables</button>
-          <button class="filter">Peripherals</button>
-          <button class="filter">Accessories</button>
+          <label class="filter active" for="filter-all">All</label>
+          <label class="filter" for="filter-audio">Audio</label>
+          <label class="filter" for="filter-wearables">Wearables</label>
+          <label class="filter" for="filter-peripherals">Peripherals</label>
+          <label class="filter" for="filter-accessories">Accessories</label>
         </div>
       </div>
 
@@ -64,44 +72,55 @@
     </section>
 
     <!--  CATALOG  -->
-    <section class="catalog-page">
+    <section id="catalog" class="catalog-page">
+      <div class="catalog__header">
+        <span class="catalog__tag">// CURATED COLLECTION</span>
+        <h2 class="catalog__title">Browse Products</h2>
+      </div>
       <div class="catalog">
+        <!-- hidden inputs used for CSS-only filter & sort -->
+        <input type="radio" name="catalog-filter" id="filter-all" checked hidden>
+        <input type="radio" name="catalog-filter" id="filter-audio" hidden>
+        <input type="radio" name="catalog-filter" id="filter-wearables" hidden>
+        <input type="radio" name="catalog-filter" id="filter-peripherals" hidden>
+        <input type="radio" name="catalog-filter" id="filter-accessories" hidden>
+
+        <input type="radio" name="catalog-sort" id="sort-featured" checked hidden>
+        <input type="radio" name="catalog-sort" id="sort-low" hidden>
+        <input type="radio" name="catalog-sort" id="sort-high" hidden>
+        <input type="radio" name="catalog-sort" id="sort-new" hidden>
+
+        <input type="radio" name="catalog-rating" id="rating-all" checked hidden>
+        <input type="radio" name="catalog-rating" id="rating-4" hidden>
+        <input type="radio" name="catalog-rating" id="rating-3" hidden>
+        <input type="radio" name="catalog-rating" id="rating-2" hidden>
+        <input type="radio" name="catalog-rating" id="rating-1" hidden>
+
         <!-- SIDEBAR -->
         <aside class="catalog__sidebar">
           <div class="filter-group">
             <h3 class="filter-group__title">Rating</h3>
 
-            <label class="filter-option">
-              <input type="radio" name="rating" /> 4★ & Up
-            </label>
-            <label class="filter-option">
-              <input type="radio" name="rating" /> 3★ & Up
-            </label>
-            <label class="filter-option">
-              <input type="radio" name="rating" /> 2★ & Up
-            </label>
-            <label class="filter-option">
-              <input type="radio" name="rating" /> 1★ & Up
-            </label>
+            <label class="filter-option" for="rating-4">4★ & Up</label>
+            <label class="filter-option" for="rating-3">3★ & Up</label>
+            <label class="filter-option" for="rating-2">2★ & Up</label>
+            <label class="filter-option" for="rating-1">1★ & Up</label>
           </div>
 
           <div class="filter-group">
             <h3 class="filter-group__title">Sort By</h3>
 
-            <select class="sort-dropdown">
-              <option>Featured</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
-              <option>Newest</option>
-              <option>Highest Rated</option>
-            </select>
+            <label class="sort-option" for="sort-featured">Featured</label>
+            <label class="sort-option" for="sort-low">Price: Low to High</label>
+            <label class="sort-option" for="sort-high">Price: High to Low</label>
+            <label class="sort-option" for="sort-new">Newest</label>
           </div>
         </aside>
 
         <!-- PRODUCT GRID -->
         <div class="catalog__products">
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-peripherals price-179 newest-5 rating-5">
             <div class="product-card__inner">
               <!-- FRONT -->
               <div class="product-card__front">
@@ -130,7 +149,7 @@
           </div>
 
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-peripherals price-89 newest-7 rating-2">
             <div class="product-card__inner">
               <div class="product-card__front">
                 <div class="product-card__image"></div>
@@ -141,7 +160,7 @@
                   <div class="product-card__meta">
                     <span class="price">$89</span>
                     <span class="old-price">$119</span>
-                    <span class="rating">★★★★☆</span>
+                    <span class="rating">★★☆☆☆</span>
                   </div>
                 </div>
               </div>
@@ -158,7 +177,7 @@
           </div>
 
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-audio price-79 newest-8 rating-1">
             <div class="product-card__inner">
               <div class="product-card__front">
                 <div class="product-card__image"></div>
@@ -168,7 +187,7 @@
 
                   <div class="product-card__meta">
                     <span class="price">$79</span>
-                    <span class="rating">★★★★☆</span>
+                    <span class="rating">★☆☆☆☆</span>
                   </div>
                 </div>
               </div>
@@ -185,7 +204,7 @@
           </div>
 
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-audio price-129 newest-6 rating-2">
             <div class="product-card__inner">
               <div class="product-card__front">
                 <div class="product-card__image"></div>
@@ -195,7 +214,7 @@
 
                   <div class="product-card__meta">
                     <span class="price">$129</span>
-                    <span class="rating">★★★★☆</span>
+                    <span class="rating">★★☆☆☆</span>
                   </div>
                 </div>
               </div>
@@ -212,7 +231,7 @@
           </div>
 
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-wearables price-249 newest-4 rating-3">
             <div class="product-card__inner">
               <div class="product-card__front">
                 <div class="product-card__image"></div>
@@ -222,7 +241,7 @@
 
                   <div class="product-card__meta">
                     <span class="price">$249</span>
-                    <span class="rating">★★★★★</span>
+                    <span class="rating">★★★☆☆</span>
                   </div>
                 </div>
               </div>
@@ -239,7 +258,7 @@
           </div>
 
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-peripherals price-199 newest-3 rating-5">
             <div class="product-card__inner">
               <div class="product-card__front">
                 <div class="product-card__image"></div>
@@ -268,7 +287,7 @@
           </div>
 
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-peripherals price-499 newest-1 rating-2">
             <div class="product-card__inner">
               <div class="product-card__front">
                 <div class="product-card__image"></div>
@@ -278,7 +297,7 @@
 
                   <div class="product-card__meta">
                     <span class="price">$499</span>
-                    <span class="rating">★★★★☆</span>
+                    <span class="rating">★★☆☆☆</span>
                   </div>
                 </div>
               </div>
@@ -295,7 +314,7 @@
           </div>
 
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-accessories price-59 newest-9 rating-1">
             <div class="product-card__inner">
               <div class="product-card__front">
                 <div class="product-card__image"></div>
@@ -305,7 +324,7 @@
 
                   <div class="product-card__meta">
                     <span class="price">$59</span>
-                    <span class="rating">★★★★☆</span>
+                    <span class="rating">★☆☆☆☆</span>
                   </div>
                 </div>
               </div>
@@ -322,7 +341,7 @@
           </div>
 
           <!-- PRODUCT CARD -->
-          <div class="product-card">
+          <div class="product-card cat-peripherals price-99 newest-2 rating-2">
             <div class="product-card__inner">
               <div class="product-card__front">
                 <div class="product-card__image"></div>
@@ -332,7 +351,7 @@
 
                   <div class="product-card__meta">
                     <span class="price">$99</span>
-                    <span class="rating">★★★★☆</span>
+                    <span class="rating">★★☆☆☆</span>
                   </div>
                 </div>
               </div>
@@ -350,106 +369,196 @@
         </div>
       </div>
 
-      <div class="catalog__footer">Showing 7 of 7 products</div>
+      <!-- <div class="catalog__footer">Showing 7 of 7 products</div> -->
+    </section>
+
+    <!--   NEW ARRIVALS SECTION   -->
+    <section id="new-arrivals" class="new-arrivals-page">
+      <span class="new-arrivals__tag">// FRESH DROPS</span>
+      <h2 class="new-arrivals__title">New Arrivals</h2>
+      <div class="new-arrivals__products catalog__products">
+        <!-- product card 1 -->
+        <div class="product-card cat-audio price-129 rating-4">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image"></div>
+              <div class="product-card__content">
+                <h4 class="product-card__title">Quantum Soundbar</h4>
+                <div class="product-card__meta">
+                  <span class="price">$129</span>
+                  <span class="rating">★★★★☆</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <h4>Product Details</h4>
+              <p>360° immersive audio with wireless streaming and smart home integration.</p>
+              <button class="btn btn--primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- product card 2 -->
+        <div class="product-card cat-wearables price-199 rating-4">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image"></div>
+              <div class="product-card__content">
+                <h4 class="product-card__title">Aurora Smartwatch</h4>
+                <div class="product-card__meta">
+                  <span class="price">$199</span>
+                  <span class="rating">★★★★☆</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <h4>Product Details</h4>
+              <p>Waterproof smartwatch with health tracking and notification sync.</p>
+              <button class="btn btn--primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- product card 3 -->
+        <div class="product-card cat-wearables price-299 rating-3">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image"></div>
+              <div class="product-card__content">
+                <h4 class="product-card__title">Nebula AR Glasses</h4>
+                <div class="product-card__meta">
+                  <span class="price">$299</span>
+                  <span class="rating">★★★☆☆</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <h4>Product Details</h4>
+              <p>Lightweight AR glasses with gesture control and real-time overlays.</p>
+              <button class="btn btn--primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- product card 4 -->
+        <div class="product-card cat-audio price-89 rating-4">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image"></div>
+              <div class="product-card__content">
+                <h4 class="product-card__title">Pulse Gaming Earbuds</h4>
+                <div class="product-card__meta">
+                  <span class="price">$89</span>
+                  <span class="rating">★★★★☆</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <h4>Product Details</h4>
+              <p>Low-latency earbuds with noise isolation and built-in mic.</p>
+              <button class="btn btn--primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--   DEALS SECTION   -->
-<section class="deals-page">
+    <section id="deals" class="deals-page">
+      <div class="deals-hero">
+        <h2 class="deals-hero__title">Cyber <span>Week</span> Sale</h2>
 
-  <div class="deals-hero">
-    <h2 class="deals-hero__title">
-      Cyber <span>Week</span> Sale
-    </h2>
+        <p class="deals-hero__subtitle">
+          Up to 40% off on selected peripherals. Free shipping on orders over
+          $100. Ends Sunday.
+        </p>
 
-    <p class="deals-hero__subtitle">
-      Up to 40% off on selected peripherals. Free shipping on orders
-      over $100. Ends Sunday.
-    </p>
+        <button class="btn btn--primary deals-hero__btn">Shop the Sale</button>
+      </div>
 
-    <button class="btn btn--primary deals-hero__btn">
-      Shop the Sale
-    </button>
-  </div>
+      <div class="subscribe-section">
+        <div class="subscribe-section__icon">✉</div>
 
-  <div class="subscribe-section">
+        <span class="subscribe-section__tag">// STAY CONNECTED</span>
 
-    <div class="subscribe-section__icon">✉</div>
+        <h3 class="subscribe-section__title">Get the Latest Drops</h3>
 
-    <span class="subscribe-section__tag">// STAY CONNECTED</span>
+        <p class="subscribe-section__desc">
+          Subscribe for early access to new releases, exclusive deals, and
+          curated tech insights.
+        </p>
 
-    <h3 class="subscribe-section__title">
-      Get the Latest Drops
-    </h3>
+        <div class="subscribe-section__form">
+          <input type="email" placeholder="your@email.com" />
+          <button class="btn btn--primary">Subscribe</button>
+        </div>
 
-    <p class="subscribe-section__desc">
-      Subscribe for early access to new releases,
-      exclusive deals, and curated tech insights.
-    </p>
+        <small class="subscribe-section__note">
+          No spam. Unsubscribe anytime. We respect your privacy.
+        </small>
+      </div>
+    </section>
 
-    <div class="subscribe-section__form">
-      <input type="email" placeholder="your@email.com" />
-      <button class="btn btn--primary">Subscribe</button>
-    </div>
+    <!--   CONTACT SECTION   -->
+    <section id="contact" class="contact-page">
+      <span class="contact-page__tag">// GET IN TOUCH</span>
 
-    <small class="subscribe-section__note">
-      No spam. Unsubscribe anytime. We respect your privacy.
-    </small>
+      <h2 class="contact-page__title">Contact Us</h2>
 
-  </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="John Doe" />
+        </div>
 
-</section>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="john@example.com" />
+        </div>
 
-<!--   CONTACT SECTION   -->
-<section class="contact-page">
+        <div class="form-group">
+          <label>Subject</label>
+          <select>
+            <option>Select a subject...</option>
+            <option>Support</option>
+            <option>Orders</option>
+            <option>Partnership</option>
+          </select>
+        </div>
 
-  <span class="contact-page__tag">// GET IN TOUCH</span>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us what's on your mind..."></textarea>
+        </div>
 
-  <h2 class="contact-page__title">Contact Us</h2>
+        <button type="submit" class="btn btn--primary contact-form__btn">
+          Send Message
+        </button>
+      </form>
+    </section>
 
-  <form class="contact-form">
+  
+    <script>
+      (function () {
+        const navbar = document.querySelector('.navbar');
+        const toggle = document.querySelector('.navbar__toggle');
+        const searchBtn = document.querySelector('.search-btn');
 
-    <div class="form-group">
-      <label>Name</label>
-      <input type="text" placeholder="John Doe" />
-    </div>
+        if (toggle) {
+          toggle.addEventListener('click', () => {
+            navbar.classList.toggle('navbar--open');
+          });
+        }
 
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" placeholder="john@example.com" />
-    </div>
-
-    <div class="form-group">
-      <label>Subject</label>
-      <select>
-        <option>Select a subject...</option>
-        <option>Support</option>
-        <option>Orders</option>
-        <option>Partnership</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label>Message</label>
-      <textarea placeholder="Tell us what's on your mind..."></textarea>
-    </div>
-
-    <button type="submit" class="btn btn--primary contact-form__btn">
-      Send Message
-    </button>
-
-  </form>
-
-</section>
-
-    <!-- JS for mobile flip -->
-    <!-- <script>
-      const cards = document.querySelectorAll(".product-card");
-
-      cards.forEach((card) => {
-        card.addEventListener("click", () => {
-          card.classList.toggle("is-flipped");
-        });
-      });
-    </script> -->
+        if (searchBtn) {
+          searchBtn.addEventListener('click', () => {
+            navbar.classList.toggle('navbar--search-open');
+            const input = navbar.querySelector('.search-input');
+            if (navbar.classList.contains('navbar--search-open')) {
+              setTimeout(() => input && input.focus(), 50);
+            }
+          });
+        }
+        // enable smooth scrolling for anchor links (hero buttons)
+        try { document.documentElement.style.scrollBehavior = 'smooth'; } catch(e) {}
+      })();
+    </script>
   </body>
 </html>
